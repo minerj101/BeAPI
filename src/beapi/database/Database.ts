@@ -26,9 +26,7 @@ export class Database {
       database: {
         name: this.name,
         id: this.id,
-        entries: [
-          this.id,
-        ],
+        entries: [] as any,
       },
     }
 
@@ -50,7 +48,7 @@ export class Database {
     executeCommand(`scoreboard players reset "${this._getDbAsString().replace(/"/g, "\\'")}" database`)
     executeCommand(`scoreboard players set "${JSON.stringify(newDb).replace(/"/g, "\\'")}" "database" ${this.id}`)
   }
-  public getEntries(): entry[] {
+  public getEntries(): Map<string, entry> {
     const c = executeCommand("scoreboard players list").statusMessage.split("\n")
     const tables: db[] = []
     for (const t of c) {
@@ -59,8 +57,13 @@ export class Database {
         tables.push(JSON.parse(db))
       }
     }
+    const entries = new Map<string, entry>()
+    for (const e of tables.find((x) => x.database.id === this.id).database.entries) {
+      if (!e.name) continue
+      entries.set(e.name, e)
+    }
 
-    return tables.find((x) => x.database.id === this.id).database.entries
+    return entries
   }
   public addEntry(entry: entry): void {
     const dbJson: db = JSON.parse(this._getDbAsString())

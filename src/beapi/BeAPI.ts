@@ -9,6 +9,7 @@ export { world } from './world/WorldManager.js'
 export { socket } from './socket/SocketManager.js'
 export { uuidv4 } from './socket/uuidv4.js'
 export { db } from './database/index.js'
+export { Database } from './database/Database.js'
 export {
   setInterval,
   clearInterval, 
