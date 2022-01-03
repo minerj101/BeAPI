@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[856],{4768:function(e){e.exports=JSON.parse('{"allTagsPath":"/BeAPI/blog/tags","slug":"/BeAPI/blog/tags/facebook","name":"facebook","count":1,"permalink":"/BeAPI/blog/tags/facebook"}')}}]);
