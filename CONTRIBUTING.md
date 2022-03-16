@@ -1,5 +1,5 @@
 # Contributing
-BeAPI is an open source project and we encourage everyone to help contribute to make the best gametest framework there is to offer.
+BeAPI is an open source project and we encourage everyone to help contribute to make the best GameTest framework there is to offer.
 
 ## Workflow
 Our development branch will always be listed as `beta` and our production branch will be listed as `production`.

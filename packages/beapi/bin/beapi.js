@@ -50,7 +50,7 @@ Yargs.updateLocale(YARG_LOCALE)
 // Build Command
 Yargs.command(
   'build',
-  chalk.gray('Build BeAPI project for gametest.'),
+  chalk.gray('Build BeAPI project for GameTest.'),
   (y) => {
     y.usage(`${chalk.hex('#698fff')('beapi')} ${chalk.gray('build')} ${chalk.grey('[flags]')}`)
     y.help('help', chalk.grey('Help for command build.'))
@@ -164,7 +164,7 @@ const nocopy = [
   'dist',
   'node_modules',
   'package.json',
-  'package-lock.json'
+  'package-lock.json',
 ]
 
 // PMK: Copy files includes module files
@@ -202,10 +202,7 @@ function copyResources(package) {
     const newPath = path.resolve(`${cwd}/${folder.name}`)
     copyLog(`Recursively copying "${folder.name}" to "${getFileName(cwd)}\\${getFileName(newPath)}"`)
     if (!fs.existsSync(newPath)) fs.mkdirSync(newPath)
-    recursiveCopySync(
-      path.resolve(`${folder.path}`),
-      path.resolve(`${cwd}/${folder.name}`),
-    )
+    recursiveCopySync(path.resolve(`${folder.path}`), path.resolve(`${cwd}/${folder.name}`))
   }
   for (const file of files.filter((x) => x.type === 'file')) {
     const newPath = path.resolve(`${cwd}/${file.name}`)
@@ -230,7 +227,10 @@ function linkModules(package) {
         .relative(file, scriptRoute)
         .substring(3)
         .replace(/\\|\\\\/g, '/')
-      const module = `${router.length ? '' : '.'}${router}/beapi_modules/${dep.replace(/\\|\\\\|\//g, '-')}/${modulePath}`
+      const module = `${router.length ? '' : '.'}${router}/beapi_modules/${dep.replace(
+        /\\|\\\\|\//g,
+        '-',
+      )}/${modulePath}`
       const contents = fs.readFileSync(file, 'utf-8')
       fs.writeFileSync(
         file,

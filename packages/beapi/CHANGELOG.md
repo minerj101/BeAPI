@@ -94,7 +94,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **commands:** added enabled property ([f0f642b](https://github.com/MCBE-Utilities/BeAPI/commit/f0f642b6e9e24a7504275679aa383b5b79346765))
 * **commands:** added permissionTags to command options ([406bbf1](https://github.com/MCBE-Utilities/BeAPI/commit/406bbf1fe11f0c7a8c7a8880eb90a808231494fe))
 * **commands:** new commandManager ([e9016fb](https://github.com/MCBE-Utilities/BeAPI/commit/e9016fb2953c640420ad95e784ab936437a3503a))
-* **core:** added gametest module to the main core ([916fb7f](https://github.com/MCBE-Utilities/BeAPI/commit/916fb7f190b10efe41f4c9f2100d738550da59e2))
+* **core:** added GameTest module to the main core ([916fb7f](https://github.com/MCBE-Utilities/BeAPI/commit/916fb7f190b10efe41f4c9f2100d738550da59e2))
 * **database:** update method ([8d224ad](https://github.com/MCBE-Utilities/BeAPI/commit/8d224ad7ff4258f76f7a83b6f52a026342a05005))
 * **entities:** added getAllAsArray ([d274fdd](https://github.com/MCBE-Utilities/BeAPI/commit/d274fdda477fc382f4c34ad98b8c5b5f7e825112))
 * **entities:** added getByUniqueId ([0ba958d](https://github.com/MCBE-Utilities/BeAPI/commit/0ba958da178fbc203605155b20cf061fffc0b607))
